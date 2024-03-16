@@ -4,7 +4,8 @@
 
 ## Tutorials
 
-* [Flutter 360 Image Tutorial for Beginners and How to Get Free 360 Images](https://youtu.be/if7wsdf-z9Q)
+* [#1 - Flutter 360 Image Tutorial for Beginners and How to Get Free 360 Images](https://youtu.be/if7wsdf-z9Q)
+* [#2 - Flutter 360 Image Thumbnail Tutorial](https://youtu.be/F05f08IdDzU)
 
 ## Getting Images
 

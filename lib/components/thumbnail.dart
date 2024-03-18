@@ -1,4 +1,5 @@
 import 'package:dot_guide_pano/screens/image_screen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Thumbnail extends StatelessWidget {
@@ -8,13 +9,17 @@ class Thumbnail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    double thumbWidth = screenWidth;
+    if (kIsWeb) {
+      thumbWidth = screenWidth / 3 - 20;
+    }
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3.0),
       child: InkWell(
         child: Image.asset(
           imagePath,
-          cacheWidth: screenWidth.toInt(),
-          cacheHeight: (screenWidth ~/ 2),
+          cacheWidth: thumbWidth.toInt(),
+          cacheHeight: (thumbWidth ~/ 2),
         ),
         onTap: () {
           // move to image screen

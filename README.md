@@ -2,6 +2,8 @@
 
 ![introduction](readme_assets/introduction.png)
 
+[https://codetricity.github.io/dot_guide_pano/](https://codetricity.github.io/dot_guide_pano/)
+
 ## Tutorials
 
 * [#1 - Flutter 360 Image Tutorial for Beginners and How to Get Free 360 Images](https://youtu.be/if7wsdf-z9Q)

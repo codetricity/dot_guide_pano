@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:dot_guide_pano/components/thumbnail.dart';
 import 'package:flutter/material.dart';
 
@@ -8,25 +10,32 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<Thumbnail> thumbList = [
+      const Thumbnail('assets/images/balcony_water.jpg'),
+      const Thumbnail('assets/images/boat.jpg'),
+      const Thumbnail('assets/images/carlsbad_nps.jpg'),
+      const Thumbnail('assets/images/carlsbad.jpg'),
+      const Thumbnail('assets/images/dock.jpg'),
+      const Thumbnail('assets/images/game_world.jpeg'),
+      const Thumbnail('assets/images/lagoon.jpg'),
+      const Thumbnail('assets/images/mountain.jpg'),
+      const Thumbnail('assets/images/planet.jpeg'),
+      const Thumbnail('assets/images/room.jpeg'),
+      const Thumbnail('assets/images/trees.jpeg'),
+      const Thumbnail('assets/images/bunker.jpeg'),
+      const Thumbnail('assets/images/grocery.jpeg'),
+    ];
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: const [
-            Thumbnail('assets/images/balcony_water.jpg'),
-            Thumbnail('assets/images/boat.jpg'),
-            Thumbnail('assets/images/carlsbad_nps.jpg'),
-            Thumbnail('assets/images/carlsbad.jpg'),
-            Thumbnail('assets/images/dock.jpg'),
-            Thumbnail('assets/images/game_world.jpeg'),
-            Thumbnail('assets/images/lagoon.jpg'),
-            Thumbnail('assets/images/mountain.jpg'),
-            Thumbnail('assets/images/planet.jpeg'),
-            Thumbnail('assets/images/room.jpeg'),
-            Thumbnail('assets/images/trees.jpeg'),
-            Thumbnail('assets/images/bunker.jpeg'),
-            Thumbnail('assets/images/grocery.jpeg'),
-          ],
-        ),
+        child: kIsWeb
+            ? GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, crossAxisSpacing: 10.0),
+                children: thumbList,
+              )
+            : ListView(
+                children: thumbList,
+              ),
       ),
     );
   }

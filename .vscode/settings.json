@@ -1,0 +1,10 @@
+{
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.suggest.showClasses": false,
+    "editor.suggest.showIssues": false,
+    "editor.suggest.showTypeParameters": false,
+    "editor.hover.delay": 2000,
+    "editor.hover.enabled": false
+}
